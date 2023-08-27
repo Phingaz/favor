@@ -1,0 +1,39 @@
+:root {
+  --white: white;
+  --hover: rgb(14, 101, 138);
+  --links: rgb(251, 251, 255);
+  --bg: #000000;
+
+  --bd-radius: 10px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: white;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: none;
+  border-radius: 15px;
+  padding: 0.6rem 1rem;
+  background-color: var(--bg);
+  color: var(--white);
+  border: 1px solid var(--white);
+  transition: var(--transition);
+}

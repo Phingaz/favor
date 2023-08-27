@@ -1,0 +1,161 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  height: 65px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(5px);
+  box-shadow: var(--bt-shadow);
+  font-family: "Varela Round", sans-serif;
+  z-index: 10;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo > h1 {
+  font-size: 1rem;
+}
+
+.logo > h2 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.nav_btn {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav_links,
+.logo {
+  color: var(--links);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.nav_links:hover,
+.logo:hover {
+  cursor: pointer;
+  color: var(--hover);
+}
+
+.services {
+  color: var(--main);
+  background-color: var(--hover);
+  text-decoration: none;
+  padding: 0.7rem;
+  border-radius: var(--bd-radius);
+  transition: var(--transition);
+  font-weight: bold;
+}
+
+.services:hover {
+  background-color: var(--white);
+  color: var(--hover);
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding-left: 2rem;
+  }
+  .services {
+    display: none;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100svh;
+    backdrop-filter: blur(5px);
+    overflow-x: hidden;
+  }
+
+  .nav_btn {
+    position: fixed;
+    right: 2rem;
+    width: 40px;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .ham {
+    display: block;
+    width: 90%;
+    height: 5px;
+    background-color: var(--links);
+    border-radius: 5px;
+    transition: 0.1s ease-in;
+    background-color: var(--hover);
+  }
+
+  .nav_btn.openb .ham:nth-child(1) {
+    transform: translateY(11.8px) rotate(45deg);
+  }
+
+  .nav_btn.openb .ham:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav_btn.openb .ham:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+
+  .open {
+    opacity: 1;
+    animation: slideDown 0.5s;
+    animation-fill-mode: forwards;
+    transition: all 0.3s ease-in;
+  }
+
+  .closed {
+    opacity: 0;
+    animation: slideUp 0.5s;
+    animation-fill-mode: forwards;
+    transition: all 0.3s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      width: 0;
+    }
+
+    to {
+      opacity: 1;
+      width: 50%;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 1;
+      width: 50%;
+    }
+
+    to {
+      opacity: 0;
+      width: 0;
+    }
+  }
+}
