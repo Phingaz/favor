@@ -11,7 +11,7 @@ export default {
       },
       animation: {
         open: "open_ham 0.4s cubic-bezier(0.37, 1.62, 0.9, 0.74)",
-        close: "close_ham 0.2s ease",
+        close: "close_ham 0.5s ease-in-out forwards",
       },
       keyframes: {
         open_ham: {

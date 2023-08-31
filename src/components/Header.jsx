@@ -16,7 +16,7 @@ const Header = () => {
       </div>
       <ul
         className={`${
-          navIsOpen ? "animate-open w-[40%] opacity-100 flex" : "animate-close w-0 "
+          navIsOpen ? "animate-open w-[40%] opacity-100 flex" : "animate-close"
         } nav_link `}
       >
         {links.map((el, i) => {
