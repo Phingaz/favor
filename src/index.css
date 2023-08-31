@@ -1,39 +1,25 @@
-:root {
-  --white: white;
-  --hover: rgb(14, 101, 138);
-  --links: rgb(251, 251, 255);
-  --bg: #000000;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  --bd-radius: 10px;
-  --transition: all 0.3s ease;
-}
+@layer components {
+  .nav_link {
+    @apply fixed top-0 right-0 flex-col justify-start items-center h-[100svh] pt-40 md:flex md:flex-row md:pt-0 md:h-auto md:w-auto md:static gap-3 md:justify-center md:items-center uppercase transition backdrop-blur-lg md:opacity-100 bg-emerald-500;
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  .transition {
+    transition: all 0.3s ease;
+  }
 
-body {
-  background-color: var(--bg);
-  color: white;
-}
+  .border {
+    border: 1px solid red;
+  }
 
-.App {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+  .button {
+    @apply px-5 py-2 uppercase outline-none rounded-full font-bold;
+  }
 
-button {
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: bold;
-  outline: none;
-  border-radius: 15px;
-  padding: 0.6rem 1rem;
-  background-color: var(--bg);
-  color: var(--white);
-  border: 1px solid var(--white);
-  transition: var(--transition);
+  .ham {
+    @apply block bg-secondary w-[90%] h-[2px] transition rounded-lg;
+  }
 }

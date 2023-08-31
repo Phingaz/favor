@@ -1,14 +1,12 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Landing } from './pages/Landing';
-
-const router = createBrowserRouter([
-  { path: "/", element: <Landing /> },
-])
+import Header from "./components/Header";
+import img from "./hero.png"
 
 function App() {
+
   return (
-    <div className="App">
-      <RouterProvider router={router} />
+    <div className="relative min-h-[100svh] w-screen bg-primary text-secondary">
+      <Header />
+      {/* <img src={img} /> */}
     </div>
   );
 }
