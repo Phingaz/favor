@@ -15,11 +15,9 @@ const Header = () => {
         <h2 className="text-1x1 text-zinc-400 uppercase">Graphic Designer</h2>
       </div>
       <ul
-        className={`nav_link ${
-          navIsOpen
-            ? "animate-open w-[40%] flex"
-            : "animate-close hidden w-0"
-        }`}
+        className={`${
+          navIsOpen ? "animate-open w-[40%] opacity-100 flex" : "animate-close w-0 "
+        } nav_link `}
       >
         {links.map((el, i) => {
           return (

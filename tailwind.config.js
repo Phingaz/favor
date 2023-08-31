@@ -11,16 +11,16 @@ export default {
       },
       animation: {
         open: "open_ham 0.4s cubic-bezier(0.37, 1.62, 0.9, 0.74)",
-        close: "close_ham 0.5s ease",
+        close: "close_ham 0.2s ease",
       },
       keyframes: {
         open_ham: {
-          from: { width: "0", opacity: "0", display: "none" },
-          to: { width: "[40%]", opacity: "1", display: "flex" },
+          from: { width: "0", display: "none", opacity: "0" },
+          to: { width: "[40%]", display: "flex", opacity: "1" },
         },
         close_ham: {
-          from: { width: "[40%]", opacity: "1", display: "flex" },
-          to: { width: "0", opacity: '0', display: 'none'   },
+          from: { width: "[40%]", display: "flex", opacity: "1" },
+          to: { width: "0", display: "none", opacity: "0" },
         },
       },
     },
