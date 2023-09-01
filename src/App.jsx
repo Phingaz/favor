@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import hero from "./components/asset/hero.png";
 import about from "./components/asset/about.png";
 import About from "./components/About";
+import Skills from "./components/Skills";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Header />
       <div className="w-[min(95%,1000px)] px-4 md:px-0">
         <Hero bg={hero} />
-        <About about_img={about}/>
+        <About about_img={about} />
+        <Skills />
       </div>
     </div>
   );

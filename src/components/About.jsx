@@ -1,10 +1,10 @@
 // eslint-disable-next-line react/prop-types
 const About = ({ about_img }) => {
   return (
-    <div
+    <section
       id="about"
       className="flex md:flex-row flex-col
-      md:bg-none bg-[url(./components/asset/about.png)] bg-cover bg-center bg-no-repeat"
+      md:bg-none bg-[url(./components/asset/about.png)] bg-cover bg-center bg-no-repeat mb-20"
     >
       <img
         className="aspect-square object-cover object-center md:block hidden"
@@ -13,11 +13,11 @@ const About = ({ about_img }) => {
         height={"100%"}
       />
       <div className="w-full min-h-[calc(100svh-100px)] backdrop-blur-sm">
-        <h2 className="font-cinzel text-5xl font-bold mb-5 tracking-wider">
+        <h2 className="font-cinzel text-3xl md:text-5xl font-extralight  mb-5 tracking-wider">
           About Me
           <hr className="w-[20%] border-2 border-links" />
         </h2>
-        <p className="font-poppins font-light text-slate-300 drop-shadow-links leading-tight text-sm">
+        <p className="font-poppins font-regular text-slate-300 drop-shadow-links leading-tight text-sm">
           Greetings! I am{" "}
           <span className="text-links font-bold tracking-wider">Favor</span>, a
           highly skilled and passionate graphic designer with a strong
@@ -61,7 +61,7 @@ const About = ({ about_img }) => {
           life.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 
