@@ -33,7 +33,10 @@ const Skills = () => {
   ];
 
   return (
-    <div className="flex md:flex-row flex-col min-h-[calc(100svh-100px)] w-full md:gap-5 gap-10">
+    <div
+      id="skills"
+      className="flex md:flex-row flex-col min-h-[calc(100svh-100px)] w-full md:gap-5 gap-10"
+    >
       <div className="flex flex-col md:gap-32 gap-10 md:w-[60%]">
         <div className="w-full">
           <h4 className="md:mb-10 mb-5 uppercase text-2xl font-bold">
