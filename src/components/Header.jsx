@@ -19,7 +19,10 @@ export const Header = () => {
   };
   return (
     <header className={styled.header}>
-      <a className="cursor-pointer hover:text-links transition-f tracking-wider">
+      <a
+        href="#home"
+        className="cursor-pointer hover:text-links transition-f tracking-wider"
+      >
         <h1 className="font-cinzel font-bold">Favour Agwegiokhe</h1>
         <h2 className="font-light font-cinzel text-sm">Graphic Designer</h2>
       </a>
@@ -46,7 +49,9 @@ export const Header = () => {
         </ul>
       </nav>
 
-      <button className="hidden lg:block button border bg-links transition-f-f hover:bg-primary border-links md:px-3 hover:border-links hover:text-links">Get in Touch</button>
+      <button className="hidden lg:block button border bg-links transition-f-f hover:bg-primary border-links md:px-3 hover:border-links hover:text-links">
+        Get in Touch
+      </button>
     </header>
   );
 };

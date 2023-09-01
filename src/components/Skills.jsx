@@ -6,21 +6,21 @@ import cd from "./asset/logos/cd.png";
 
 const Skills = () => {
   const software_skill = [
-    { id: 1, img: il, title: "Illustrator", leve: 90 },
-    { id: 2, img: ps, title: "Photoshop", leve: 50 },
-    { id: 3, img: xd, title: "Xd", leve: 60 },
-    { id: 4, img: fg, title: "Figma", leve: 70 },
-    { id: 5, img: cd, title: "Corel Draw", leve: 100 },
+    { id: 1, img: il, title: "Illustrator", from: 0, level: 90 },
+    { id: 2, img: ps, title: "Photoshop", from: 0, level: 50 },
+    { id: 3, img: xd, title: "Xd", from: 0, level: 60 },
+    { id: 4, img: fg, title: "Figma", from: 0, level: 70 },
+    { id: 5, img: cd, title: "Corel Draw", from: 0, level: 100 },
   ];
 
   const design_skills = [
     { id: 1, img: il, text: "Visual Communication" },
     { id: 2, img: il, text: "Typography" },
     { id: 3, img: il, text: "Layout and Composition" },
-    { id: 2, img: il, text: "Web Design" },
-    { id: 2, img: il, text: "Attention to Detail" },
-    { id: 2, img: il, text: "Communication" },
-    { id: 2, img: il, text: "Creativity" },
+    { id: 4, img: il, text: "Web Design" },
+    { id: 5, img: il, text: "Attention to Detail" },
+    { id: 6, img: il, text: "Communication" },
+    { id: 7, img: il, text: "Creativity" },
   ];
 
   const license = [
@@ -35,7 +35,7 @@ const Skills = () => {
   return (
     <div
       id="skills"
-      className="flex md:flex-row flex-col min-h-[calc(100svh-100px)] w-full md:gap-5 gap-10"
+      className="flex md:flex-row flex-col min-h-[calc(100svh-100px)] w-full md:gap-5 gap-10 mb-20"
     >
       <div className="flex flex-col md:gap-32 gap-10 md:w-[60%]">
         <div className="w-full">
@@ -50,8 +50,11 @@ const Skills = () => {
               <img width={"50px"} src={skill.img} />
               <h5 className="min-w-[20%]">{skill.title}</h5>
 
-              <div className="min-w-[50%] bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                <div className="bg-blue-600 h-2.5 rounded-full"></div>
+              <div className="min-w-[50%] bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
+                <div
+                  className="bg-links h-1.5 rounded-full"
+                  style={{ width: `${skill.level}%` }}
+                ></div>
               </div>
             </div>
           ))}
@@ -73,7 +76,7 @@ const Skills = () => {
           Design Skill
         </h4>
         {design_skills.map((skill) => (
-          <div key={skill.id} className="flex gap-2 mb-5">
+          <div key={skill.id} className="flex items-center gap-2 mb-5">
             <img src={skill.img} width={"50px"} />
             <h6 className="font-bold tracking-wide">{skill.text}</h6>
           </div>

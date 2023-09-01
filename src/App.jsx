@@ -4,6 +4,7 @@ import hero from "./components/asset/hero.png";
 import about from "./components/asset/about.png";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Services from "./components/Services";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Hero bg={hero} />
         <About about_img={about} />
         <Skills />
+        <Services />
       </div>
     </div>
   );

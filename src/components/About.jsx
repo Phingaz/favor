@@ -1,4 +1,7 @@
-// eslint-disable-next-line react/prop-types
+/* eslint-disable react/prop-types */
+
+import { FadeIn } from "./Reveal";
+
 const About = ({ about_img }) => {
   return (
     <section
@@ -12,8 +15,9 @@ const About = ({ about_img }) => {
         width={"50%"}
         height={"100%"}
       />
+      <FadeIn delay={0.3} duration={1}>
       <div className="w-full min-h-[calc(100svh-100px)] backdrop-blur-sm">
-        <h2 className="font-cinzel text-3xl md:text-5xl font-extralight  mb-5 tracking-wider">
+        <h2 className="font-cinzel text-3xl md:text-5xl font-extralight mb-5 tracking-wider">
           About Me
           <hr className="w-[20%] border-2 border-links" />
         </h2>
@@ -61,6 +65,7 @@ const About = ({ about_img }) => {
           life.
         </p>
       </div>
+     </FadeIn>
     </section>
   );
 };
