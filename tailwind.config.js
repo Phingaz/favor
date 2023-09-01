@@ -3,6 +3,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        cinzel: ["Cinzel", "serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
       colors: {
         primary: "#000009",
         secondary: "#fff",

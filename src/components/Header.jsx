@@ -1,51 +1,52 @@
+// import { a } from "react-router-dom";
+import styled from "./Header.module.css";
+// import logo from "./asset/logo.png";
 import { useState } from "react";
 
-const Header = () => {
+export const Header = () => {
+  const [sh, setSh] = useState(false);
+
   const links = [
-    { link: "#", title: "home" },
-    { link: "#", title: "home" },
-    { link: "#", title: "home" },
-    { link: "#", title: "home" },
+    { title: "Home", link: "#home" },
+    { title: "About", link: "#about" },
+    { title: "Skills", link: "#skills" },
+    { title: "Services", link: "#services" },
+    { title: "Contact", link: "#contact" },
   ];
-  const [navIsOpen, setNavIsOpen] = useState(false);
+
+  const shoNa = () => {
+    setSh((p) => !p);
+  };
   return (
-    <header className="sticky top-0 left-0 flex justify-between items-center h-14 w-full md:px-20 px-5">
-      <div className="text-center">
-        <h1 className="font-bold text-base uppercase">Favor Agwegiokhe</h1>
-        <h2 className="text-1x1 text-zinc-400 uppercase">Graphic Designer</h2>
-      </div>
-      <ul
-        className={`${
-          navIsOpen ? "animate-open w-[40%] opacity-100 flex" : "animate-close"
-        } nav_link `}
+    <header className={styled.header}>
+      <a className="cursor-pointer hover:text-links transition-f tracking-wider">
+        <h1 className="font-cinzel font-bold">Favour Agwegiokhe</h1>
+        <h2 className="font-light font-cinzel text-sm">Graphic Designer</h2>
+      </a>
+
+      <button
+        onClick={shoNa}
+        className={`${styled.nav_btn} ${sh && styled.openb}`}
       >
-        {links.map((el, i) => {
-          return (
-            <li key={i} className="transition hover:text-links">
+        <span className={styled.ham}></span>
+        <span className={styled.ham}></span>
+        <span className={styled.ham}></span>
+      </button>
+
+      <nav className={`${styled.nav} ${sh ? styled.open : styled.closed}`}>
+        <ul className="flex flex-col items-center backdrop-blur-md h-full md:flex-row md:justify-center md:items-center gap-5 ">
+          {links.map((el, i) => (
+            <li
+              key={i}
+              className="text-lg font-poppins cursor-pointer hover:text-links transition-f font-bold tracking-wider"
+            >
               <a href={el.link}>{el.title}</a>
             </li>
-          );
-        })}
-      </ul>
-      <button className={`hidden md:block button bg-main`}>Get in touch</button>
-      <button
-        onClick={() => setNavIsOpen((p) => !p)}
-        className="md:hidden fixed top-3 right-3 z-50 flex flex-col justify-center items-center gap-2 h-10 w-9"
-      >
-        <span
-          className={`ham ${
-            navIsOpen ? "translate-y-1 rotate-45" : "ham-close"
-          }`}
-        ></span>
-        <span className={`ham ${navIsOpen ? "opacity-0" : "ham-close"}`}></span>
-        <span
-          className={`ham ${
-            navIsOpen ? "-translate-y-4 -rotate-45" : "ham-close"
-          }`}
-        ></span>
-      </button>
+          ))}
+        </ul>
+      </nav>
+
+      <button className="hidden lg:block button bg-links transition-f-f hover:bg-secondary md:px-3 hover:text-links">Get in Touch</button>
     </header>
   );
 };
-
-export default Header;

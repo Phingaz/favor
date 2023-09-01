@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,8 +9,8 @@
     @apply fixed top-0 right-0 flex-col justify-start items-center h-[100svh] pt-40 md:flex md:flex-row md:pt-0 md:h-auto md:w-auto md:static gap-3 md:justify-center md:items-center uppercase transition backdrop-blur-lg md:opacity-100 md:bg-transparent bg-emerald-500;
   }
 
-  .transition {
-    transition: all 0.3s ease;
+  .transition-f {
+    transition: all 0.35s ease;
   }
 
   .border {
@@ -16,7 +18,7 @@
   }
 
   .button {
-    @apply px-5 py-2 uppercase outline-none rounded-full font-bold;
+    @apply py-2 uppercase outline-none rounded-full font-bold;
   }
 
   .ham {
