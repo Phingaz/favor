@@ -16,7 +16,7 @@ const About = ({ about_img }) => {
         height={"100%"}
       />
       <FadeIn delay={0.3} duration={1}>
-      <div className="w-full min-h-[calc(100svh-100px)] backdrop-blur-sm">
+      <div className="w-full min-h-[calc(100svh-100px)] flex flex-col justify-end backdrop-blur-sm">
         <h2 className="font-cinzel text-3xl md:text-5xl font-extralight mb-5 tracking-wider">
           About Me
           <hr className="w-[20%] border-2 border-links" />
