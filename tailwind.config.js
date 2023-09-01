@@ -7,6 +7,9 @@ export default {
         cinzel: ["Cinzel", "serif"],
         poppins: ["Poppins", "sans-serif"],
       },
+      dropShadow: {
+        "links": "0px 0px 2px #333",
+      },
       colors: {
         primary: "#000009",
         secondary: "#fff",

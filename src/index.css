@@ -18,10 +18,15 @@
   }
 
   .button {
-    @apply py-2 uppercase outline-none rounded-full font-bold;
+    @apply py-2 uppercase outline-none rounded-full font-bold transition-f;
   }
 
   .ham {
-    @apply block bg-secondary w-[90%] h-[2px] transition rounded-lg;
+    @apply block bg-secondary w-[90%] h-[2px] transition-f rounded-lg;
   }
+}
+
+:root {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }

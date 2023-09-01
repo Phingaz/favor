@@ -9,6 +9,8 @@
   width: 100%;
   padding: 0 3rem;
   font-family: var(--font-heading);
+  backdrop-filter: blur(5px);
+  z-index: 1;
 }
 
 .nav_btn {
@@ -27,6 +29,7 @@
     min-width: 0;
     overflow-x: hidden;
     z-index: 999;
+    background-color: black;
   }
 
   .nav_btn {

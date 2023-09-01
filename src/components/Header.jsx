@@ -34,7 +34,7 @@ export const Header = () => {
       </button>
 
       <nav className={`${styled.nav} ${sh ? styled.open : styled.closed}`}>
-        <ul className="flex flex-col items-center backdrop-blur-md h-full md:flex-row md:justify-center md:items-center gap-5 ">
+        <ul className="flex flex-col items-center h-full md:flex-row md:justify-center md:items-center gap-5 md:bg-transparent">
           {links.map((el, i) => (
             <li
               key={i}
@@ -46,7 +46,7 @@ export const Header = () => {
         </ul>
       </nav>
 
-      <button className="hidden lg:block button bg-links transition-f-f hover:bg-secondary md:px-3 hover:text-links">Get in Touch</button>
+      <button className="hidden lg:block button border bg-links transition-f-f hover:bg-primary border-links md:px-3 hover:border-links hover:text-links">Get in Touch</button>
     </header>
   );
 };
