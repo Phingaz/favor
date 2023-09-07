@@ -1,41 +1,46 @@
-import il from "./asset/logos/il.png";
+import logo from "./asset/services/logo.png";
+import branding from "./asset/services/branding.png";
+import packages from "./asset/services/package.png";
+import computer from "./asset/services/computer.png";
+import print from "./asset/services/print.png";
+import reading from "./asset/services/reading.png";
 
 const Services = () => {
   const services = [
     {
       id: 1,
-      img: il,
+      img: logo,
       title: "Logo",
       text: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available",
     },
     {
       id: 2,
-      img: il,
-      title: "Logo",
+      img: branding,
+      title: "Branding",
       text: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available",
     },
     {
       id: 3,
-      img: il,
-      title: "Logo",
+      img: packages,
+      title: "Packaging",
       text: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available",
     },
     {
       id: 4,
-      img: il,
-      title: "Logo",
+      img: computer,
+      title: "UI/UX",
       text: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available",
     },
     {
       id: 5,
-      img: il,
-      title: "Logo",
+      img: print,
+      title: "Print Design",
       text: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available",
     },
     {
       id: 6,
-      img: il,
-      title: "Logo",
+      img: reading,
+      title: "Illustration",
       text: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available",
     },
   ];

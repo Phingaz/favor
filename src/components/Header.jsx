@@ -1,6 +1,4 @@
-// import { a } from "react-router-dom";
 import styled from "./Header.module.css";
-// import logo from "./asset/logo.png";
 import { useState } from "react";
 
 export const Header = () => {
@@ -41,7 +39,9 @@ export const Header = () => {
           {links.map((el, i) => (
             <li
               key={i}
-              className="text-lg font-poppins cursor-pointer hover:text-links transition-f font-bold tracking-wider"
+              className="text-lg font-poppins cursor-pointer hover:text-links transition-f font-bold tracking-wider
+              "
+              onClick={shoNa}
             >
               <a href={el.link}>{el.title}</a>
             </li>

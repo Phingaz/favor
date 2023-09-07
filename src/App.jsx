@@ -5,6 +5,7 @@ import about from "./components/asset/about.png";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Services from "./components/Services";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <About about_img={about} />
         <Skills />
         <Services />
+        <Contact />
       </div>
     </div>
   );
